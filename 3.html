@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <style>
+      #titulo {
+        text-align: center;
+      }
+
+      #boton1,
+      #boton2 {
+        text-align: center;
+        width: 200px;
+      }
+    </style>
+    <h1 id="titulo">Este es un título dinámico</h1>
+    <input type="button" value="Cambiar Color" onClick="cambiarColor()" />
+    <input
+      type="button"
+      value="Cambiar Tamaño de Fuente"
+      onClick="cambiarTamanoFuente()"
+    />
+    <input
+      type="button"
+      value="Cambiar Tamaño de Fuente a Pequeña"
+      onClick="cambiarFuentePequena()"
+    />
+    <input
+      type="button"
+      value="Cambiar Tamaño de Fuente a Mediana"
+      onClick="cambiarFuenteMediana()"
+    />
+    <input
+      type="button"
+      value="Cambiar Tamaño de Fuente a Grande"
+      onClick="cambiarFuenteGrande()"
+    />
+    <script>
+      function cambiarColor() {
+        let tit = document.getElementById("titulo");
+        tit.style.color = "#ff0000";
+      }
+
+      function cambiarTamanoFuente() {
+        let tit = document.getElementById("titulo");
+        tit.style.fontSize = "60px";
+      }
+
+      
+      function cambiarFuenteGrande(){
+        let tit = document.getElementById("titulo")
+        tit.style.fontSize = "20px";
+
+    }
+      function cambiarFuenteMediana(){
+        let tit = document.getElementById("titulo")
+        tit.style.fontSize = "13px";
+
+    }
+    
+    function cambiarFuentePequena(){
+        let tit = document.getElementById("titulo")
+        tit.style.fontSize = "10px";
+
+    }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+
+<body>
+    <p>Este es el primer párrafo</p>
+    <p>Este es el segundo párrafo  </p>
+    <p>Este es el tercer párrafo</p>
+    <input type="button" value="Agregar un punto al final de cada párrafo" onClick="cambiarParrafos()">
+    <input type="button" value="Cambiar color parrafo" onClick="cambiarColor()">
+    <script>
+
+function cambiarParrafos() {
+    let lista = document.getElementsByTagName('p')
+    for (let f = 0; f < lista.length; f++)
+        lista[f].childNodes[0].nodeValue = lista[f].childNodes[0].nodeValue + '.'
+}
+
+function cambiarColor(){
+    let lista = document.getElementsByTagName('p')
+    
+    /* for(let i = 0;i<lista.length;i++){
+        lista[i].style.color="red"
+    } */
+
+    for (let elemento of lista){
+        elemento.style.color="red"
+    }
+
+}
+
+    </script>
+</body>
+
+</html>

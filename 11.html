@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+
+<body>
+    <p id="parrafo">Texto inicial:</p>
+    <ul id="listaUl">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <input type="button" value="Agregar nodo de texto" onClick="agregar()">
+    <input type="button" value="Agregar Li" onClick="agregarLi()">
+    <script >
+        let contador = 1
+
+        function agregar() {
+            let nt = document.createTextNode('Nuevo texto ' + contador + '-')
+            let nparrafo = document.getElementById('parrafo')
+            nparrafo.appendChild(nt)
+            contador++
+        }
+        function agregarLi() {
+            let nUl = document.getElementById('listaUl')
+            let lista = nUl.getElementsByTagName("li");
+
+
+            for(let i = 0;i<lista.length;i++){
+                let nt = document.createTextNode('Nuevo texto ' + contador + '-')
+
+                lista[i].appendChild(nt)
+            }
+            
+            
+            contador++
+
+        }
+        </script>
+</body>
+
+</html>
