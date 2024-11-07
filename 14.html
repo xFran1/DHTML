@@ -34,21 +34,25 @@
         let pa = document.getElementById("parrafos");
         pa.insertBefore(elemento, puntero);
       }
-      let distancia = 0;
+
       const lista = document.getElementById("parrafos");
-      const elementos = lista.getElementsByTagName("p");
       let elementos_secundarios = lista.getElementsByTagName("p");
 
-      function insertarPrincipio() {
+      function cogerArray() {
+        let array = [];
+        const elementos = lista.getElementsByTagName("p");
+        array = [...elementos].reverse();
+        return array;
+      }
+      let array = cogerArray();
 
-        for (let i = 0 ; i < 5; i++) {
-          let nodotexto = document.createTextNode(elementos[i].textContent);
+      function insertarPrincipio() {
+        for (let i = 0; i < 5; i++) {
+          let nodotexto = document.createTextNode(array[i].textContent);
           let elemento = document.createElement("p");
-          console.log(elementos.length)
 
           elemento.appendChild(nodotexto);
           lista.insertBefore(elemento, elementos_secundarios[0]);
-
         }
       }
     </script>
