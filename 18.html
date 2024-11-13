@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="primer_enlace" href="17.html">Primer enlace</a>
+    <a id="segundo_enlace" href="">Segundo enlace</a>
+    
+    <input type="button" value="pasar atributo" onclick="pasar_atributo()">
+    <script>
+        function pasar_atributo(){
+            let puntero_1 = document.getElementById('primer_enlace')
+            let puntero_2 = document.getElementById('segundo_enlace')
+
+            puntero_2.setAttribute("href",puntero_1.getAttribute("href"));
+
+        }
+    </script>
+</body>
+</html>

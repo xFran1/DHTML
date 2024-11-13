@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+
+    </div>
+    <button onclick="crear_lista()">Crear lista ordenada</button>
+
+    <script>
+    const dias=['lunes','martes','miércoles','jueves','viernes','sábado','domingo']
+
+    function crear_lista(){
+            let div = document.getElementById('div')
+            let ol = document.createElement("ol");
+            for(element of dias){
+            let li = document.createElement('li')
+            let nt = document.createTextNode(element)
+
+            li.appendChild(nt)
+                ol.appendChild(li)
+            };   
+            div.appendChild(ol)
+    }
+    </script>
+</body>
+</html>

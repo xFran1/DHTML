@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="titulo1">Título original.</h1>
+    <input type="button" value="Cambiar título" onclick="cambiarTitulo()">
+    <input type="button" value="Recuperar contenido del título" onclick="recuperarTitulo()">
+
+    <script>
+function cambiarTitulo() {
+    let tit = document.getElementById("titulo1")
+    tit.innerText = "Nuevo título"
+}
+
+function recuperarTitulo() {
+    alert(document.getElementById("titulo1").innerText)
+}
+    </script>
+</body>
+</html>
