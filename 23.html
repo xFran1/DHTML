@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <ol id="lista">
+        <li>España</li>
+        <li>Argentina</li>
+        <li>Colombia</li>
+    </ol>
+
+    <select id="color" onchange="cambiar_color()">
+        <option disabled selected>Selecciona una opcion</option>
+        <option value="black">Negro</option>
+        <option value="yellow">Amarillo</option>
+        <option value="green">Verde</option>
+    </select>
+
+    <script>
+        function cambiar_color(){
+            let puntero = document.getElementById('lista')
+            let color = document.getElementById("color")
+            puntero.style.color=color.value;
+        }
+    </script>
+</body>
+</html>
